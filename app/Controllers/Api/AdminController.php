@@ -61,7 +61,11 @@ class AdminController extends Controller
             'data' => $data
         ];
         $token = JWT::encode($array,TOKEN);
-        return $token;
+        $res = [
+            'exp' => $array['exp'],
+            "token" => $token
+        ];
+        return $res;
     }
 
     public function getTypes()
