@@ -73,7 +73,14 @@ class ArticleController extends Controller
         ];
         $ip = getUserIp();
         if($id == 0){
-            $res = Article::query()->create($data);
+            $Art = new Article();
+            $Art->title =  $_REQUEST['title'];
+            $Art->type = $_REQUEST['type'];
+            $Art->key = $_REQUEST['key'];
+            $Art->content = $_REQUEST['content'];
+            $Art->mdContent = $_REQUEST['mdContent'];
+            $Art->img = $_REQUEST['img'];
+            $res = $Art->save();
             if($res){
                 setApiLog($ip,"新增文章 title: ". $_REQUEST['title'],'新增文章成功！');
                 echo self::responseJson([],1,"新增文章成功！");
