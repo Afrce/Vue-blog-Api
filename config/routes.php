@@ -2,7 +2,7 @@
 use NoahBuscher\Macaw\Macaw;
 use App\Controllers\UserController;
 Macaw::get('/test',function (){
-    echo env('DB_USERNAME');
+    echo phpinfo();
 });
 
 Macaw::get('/',"App\Controllers\Api\IndexController@index");

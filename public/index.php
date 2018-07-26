@@ -20,13 +20,14 @@ set_exception_handler(function ( $exception){
 
 date_default_timezone_set("PRC");
 
+// 引入env 文件
+$dotenv = new Dotenv\Dotenv(__DIR__ .'/../');
+$dotenv->load();
+
 $capsule = new Capsule;
 
 $capsule->addConnection(require '../config/database.php');
 // 启动Eloquent
 $capsule->bootEloquent();
-// 引入env 文件
-$dotenv = new Dotenv\Dotenv(__DIR__ .'/../');
-$dotenv->load();
 
 require_once '../config/routes.php';
