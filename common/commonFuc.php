@@ -54,7 +54,7 @@ if(!function_exists("setLog")){
     function setLog($data,$type)
     {
         $log = new Logger("LOG");
-        $path = '../logs/'. date('Y-m-d') . $type . ".log";
+        $path = '../logs/'. date('Y-m-d-') . $type . ".log";
         $log->pushHandler(new StreamHandler($path, Logger::WARNING));
         $log->$type($data);
     }

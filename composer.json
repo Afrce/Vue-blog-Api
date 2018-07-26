@@ -14,7 +14,8 @@
         "nesbot/carbon": "^1.31",
         "firebase/php-jwt": "^5.0",
         "zendframework/zend-http": "~2.3",
-        "illuminate/pagination": "~5.0"
+        "illuminate/pagination": "~5.0",
+        "vlucas/phpdotenv": "^2.5"
 	 },
 	 "autoload": {
         "psr-4": {
@@ -37,7 +38,10 @@
     "repositories": {
         "packagist": {
             "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
+            "url": "https://packagist.laravel-china.org"
         }
+    },
+    "require-dev": {
+        "eaglewu/swoole-ide-helper": "dev-master"
     }
 }

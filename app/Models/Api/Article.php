@@ -12,6 +12,7 @@ namespace App\Models\Api;
 use App\Models\Model;
 use App\Models\Api\Key;
 use App\Models\Api\Type;
+use Carbon\Carbon;
 
 class Article extends Model
 {
@@ -30,11 +31,13 @@ class Article extends Model
         return $name;
     }
 
-    function getKeyOriginalAttribute() {
-        return $this->attributes['key'];
-    }
+    public function getCreatedAtAttribute($date)
+    {
+        Carbon::setLocale("zh");
+        if (Carbon::now() > Carbon::parse($date)->addDays(30)) {
+            return Carbon::parse($date);
+        }
 
-    function getTypeOriginalAttribute() {
-        return $this->attributes['type'];
+        return Carbon::parse($date)->diffForHumans();
     }
 }

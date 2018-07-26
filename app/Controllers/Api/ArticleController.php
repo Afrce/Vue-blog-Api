@@ -42,7 +42,7 @@ class ArticleController extends Controller
     public function getArtInfo(){
         parseToken();
         $id = $_REQUEST['id'];
-        $res1= Article::query()->find($id)->first();
+        $res1= Article::query()->where('id',$id)->first();
         $res = $res1->toArray();
         $res['key'] = ($res1->getOriginal('key')) * 1;
         $res['type'] = ($res1->getOriginal('type')) * 1;
