@@ -15,7 +15,8 @@
         "firebase/php-jwt": "^5.0",
         "zendframework/zend-http": "~2.3",
         "illuminate/pagination": "~5.0",
-        "vlucas/phpdotenv": "^2.5"
+        "vlucas/phpdotenv": "^2.5",
+        "predis/predis": "^1.1"
 	 },
 	 "autoload": {
         "psr-4": {
