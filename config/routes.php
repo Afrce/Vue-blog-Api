@@ -37,5 +37,7 @@ Macaw::post('/admin/getArtInfo','App\Controllers\Api\ArticleController@getArtInf
 Macaw::post('/admin/updateArt','App\Controllers\Api\ArticleController@updateArt');
 Macaw::post('/admin/getList','App\Controllers\Api\ArticleController@getList');
 
+Macaw::post("/getTrending","App\Controllers\Api\githubController@getTrending");
+Macaw::post("/searchRepository","App\Controllers\Api\githubController@search");
 Macaw::dispatch();
 ?>

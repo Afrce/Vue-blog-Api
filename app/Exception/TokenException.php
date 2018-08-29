@@ -10,6 +10,7 @@ namespace App\Exception;
 
 
 use Throwable;
+use http\Exception;
 
 class TokenException extends \Exception
 {

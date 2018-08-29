@@ -16,7 +16,10 @@
         "zendframework/zend-http": "~2.3",
         "illuminate/pagination": "~5.0",
         "vlucas/phpdotenv": "^2.5",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "yinli/pay": "dev-master",
+        "overtrue/pinyin": "~3.0",
+        "guzzlehttp/guzzle": "~6.0"
 	 },
 	 "autoload": {
         "psr-4": {
@@ -39,7 +42,7 @@
     "repositories": {
         "packagist": {
             "type": "composer",
-            "url": "https://packagist.laravel-china.org"
+            "url": "https://packagist.org"
         }
     },
     "require-dev": {
